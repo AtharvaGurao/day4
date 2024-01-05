@@ -17,3 +17,12 @@ with open('eggs.csv', 'w', newline='') as csvfile:
     spamwriter.writerow(['Rice', '100 '])
     spamwriter.writerow(['wheat', '200'])
     spamwriter.writerow(['oil', '300'])
+
+
+    with open('eggs.csv', 'w', newline='') as csvfile:
+        fieldnames=["first name","Surname"]
+        writer=csv.DictWriter(f,fieldnames=fieldnames)
+
+        writer.writeheader()
+        writer.writerow({"first name":"Atharva",
+        "surname":"Gurao"})
